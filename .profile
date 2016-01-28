@@ -7,7 +7,7 @@ export ANT_HOME='/Developer/Java/ant'
 
 # Command tweaks
 alias less="less -n"
-alias ls="ls -G"
+alias ls="ls -AG"
 alias ld="ls -d .*"
 
 # Directory shortcuts
@@ -41,7 +41,6 @@ alias profile="vi ~/.profile"
 alias purr='afplay /System/Library/Sounds/Purr.aiff'
 alias railsenv='export RAILS_ENV=development'
 alias sql='sudo /usr/local/mysql/bin/mysql'
-alias wget='curl -O'
 count() { find "$1" | wc -l; }
 
 
@@ -86,6 +85,9 @@ investigate() { git log --follow -p "$1"; }
 ours() { git checkout --ours "$1" && git add "$1" && git status; }
 theirs() { git checkout --theirs "$1" && git add "$1" && git status; }
 untrack() { git update-index --assume-unchanged "$1"; }
+
+# Download entire website
+downloadsite() { wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains "$1" --no-parent "$1"; }
 
 # rvm setup
 export PATH="$HOME/.rvm/bin:/usr/local:/usr/local/bin:/usr/local/jruby/bin:$PATH"
