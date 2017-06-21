@@ -53,6 +53,7 @@ alias purr='afplay /System/Library/Sounds/Purr.aiff'
 alias railsenv='export RAILS_ENV=development'
 alias sql='sudo /usr/local/mysql/bin/mysql'
 count() { find "$1" | wc -l; }
+anno() { bundle exec annotate "$1"; }
 
 
 # Git command shortcuts
