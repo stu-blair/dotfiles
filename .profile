@@ -102,6 +102,19 @@ untrack() { git update-index --assume-unchanged "$1"; }
 # Download entire website
 downloadsite() { wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains "$1" --no-parent "$1"; }
 
+# Imagemagick
+compressjpg() { mogrify -strip -quality 75% "$1"; }
+compressgif() { convert "$1" -fuzz 10% -layers Optimize lo."$1"; }
+
+# ffmpeg
+ogg2mp3() { ffmpeg -i "$1" -acodec libmp3lame "`basename $1 .ogg`.mp3"; }
+
+# youtube-dl
+ydl() { youtube-dl -x --audio-format m4a --audio-quality 0 $1; }
+
+# organize-music
+organize() { rvm use ruby-2.3.1@modern-stuff && ruby ~/Dropbox/\~\ Coding/organize_music.rb; }
+
 # rvm setup
 export PATH="$HOME/.rvm/bin:/usr/local:/usr/local/bin:/usr/local/jruby/bin:$PATH"
 source ~/.rvm/scripts/rvm
