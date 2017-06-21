@@ -27,12 +27,12 @@ alias docs="cd ~/Documents/"
 alias downloads="cd ~/Downloads/"
 alias dropbox="cd ~/Dropbox && ll"
 alias sublimefolder="cd ~/Library/Application\ Support/Sublime\ Text\ 3/ && ll"
-alias blog="cd ~/src/stooblog/ && ll"
+alias stoo="cd ~/src/stoopage/ && ll"
 alias bern="cd ~/src/Connect/ && gs"
 alias dotfiles="cd ~/src/dotfiles/ && gs && ld"
 
 # Website syncing shortcuts
-alias sb="rsync -azP --delete /Users/sblair/src/stooblog/build/ stublair@stublair.co:/home4/stublair/public_html/"
+alias sb="rsync -azP --delete /Users/sblair/src/stoopage/build/ stublair@stublair.co:/home4/stublair/public_html/"
 alias mc="rsync -azP --delete /Users/sblair/src/lolasghost/build/ lolasgho@50.87.249.87:/home1/lolasgho/public_html/"
 
 # CD aliases
