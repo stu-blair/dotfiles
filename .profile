@@ -55,6 +55,7 @@ alias gpr='git pull --rebase'
 alias graph="git log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs='git status'
 alias gsl='git stash list'
+alias meld='git commit --amend --no-edit'
 alias kontinue='git rebase --continue || git cherry-pick --continue'
 alias resethead='git reset --soft HEAD\^ && git status'
 alias skip='git rebase --skip && gs'
