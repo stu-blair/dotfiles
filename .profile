@@ -13,6 +13,9 @@ export JAVA_TOOLS_OPTIONS="-Dfile.encoding=UTF8"
 export CATALINA_OPTS="" #-XX:PermSize=1024m -XX:MaxPermSize=2056m"
 export ANT_HOME='/Developer/Java/ant'
 
+# Cliclick commands
+alias reload='cliclick c:20,130 w:30 kd:cmd,shift t:R ku:cmd,shift'
+
 # Command tweaks
 alias less="less -n"
 alias ls="ls -AG"
