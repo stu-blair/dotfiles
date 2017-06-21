@@ -1,8 +1,16 @@
 # Path setup
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
-export JAVA_OPTS='-Xms2000M -Xmx6000M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8 -server -XX:+AggressiveOpts -XX:+UseCompressedOops'
+
+# Old java
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+# Brew java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+#export JRUBY_OPTS='-Xreify.classes=true'
+export JRUBY_OPTS='--2.0'
+
+export JAVA_OPTS='-Xms800M -Xmx4048M' #  -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8 -server -XX:+AggressiveOpts -XX:+UseCompressedOops -server -d64 -Djruby.reify.classes=true'
 export JAVA_TOOLS_OPTIONS="-Dfile.encoding=UTF8"
-export CATALINA_OPTS="-XX:PermSize=1024m -XX:MaxPermSize=2056m -Xms512m -Xmx4000m"
+export CATALINA_OPTS="" #-XX:PermSize=1024m -XX:MaxPermSize=2056m"
 export ANT_HOME='/Developer/Java/ant'
 
 # Command tweaks
