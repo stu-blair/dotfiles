@@ -122,5 +122,3 @@ source ~/.rvm/scripts/rvm
 # Include private Cytobank-related commands
 source ~/.cyto-profile
 
-# Include private NotableLabs-related commands
-source ~/.NL-profile
