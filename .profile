@@ -67,7 +67,7 @@ contains() { git branch --contains "$1"; }
 ga() { git add "$1"; }
 gb() {
   if [ -z $1 ]; then
-    for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort; 
+    for k in `git branch | perl -pe s/\^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort; 
   else
     git checkout -b "$1"
     git status
