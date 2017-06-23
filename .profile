@@ -5,8 +5,6 @@
 # Brew java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-#export JRUBY_OPTS='-Xreify.classes=true'
-export JRUBY_OPTS='--2.0'
 
 export JAVA_OPTS='-Xms800M -Xmx4048M' #  -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8 -server -XX:+AggressiveOpts -XX:+UseCompressedOops -server -d64 -Djruby.reify.classes=true'
 export JAVA_TOOLS_OPTIONS="-Dfile.encoding=UTF8"
@@ -120,5 +118,5 @@ export PATH="$HOME/.rvm/bin:/usr/local:/usr/local/bin:/usr/local/jruby/bin:$PATH
 source ~/.rvm/scripts/rvm
 
 # Include private Cytobank-related commands
-source ~/.cyto-profile
+source ~/Dropbox/Cytobank/Dotfile/cyto-profile
 
